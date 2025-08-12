@@ -4,7 +4,7 @@ import AuthForm from '../components/Forms/AuthForm';
 
 function Login() {
     const [formData, setFormData] = useState({
-        username: '',
+        email: '',
         password: ''
     });
 
@@ -20,7 +20,7 @@ function Login() {
         event.preventDefault();
         console.log('Form submitted:', formData);
         setFormData({
-            username: '',
+            email: '',
             password: ''
         });
     };
@@ -30,7 +30,7 @@ function Login() {
             <AuthForm
                 title="Sign In"
                 fields={[
-                    { type: 'text', placeholder: 'Username', name: 'username' },
+                    { type: 'email', placeholder: 'Email', name: 'email' },
                     { type: 'password', placeholder: 'Password', name: 'password' }
                 ]}
                 formData={formData}
