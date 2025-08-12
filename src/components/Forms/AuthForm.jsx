@@ -2,7 +2,7 @@ import '../../styles/authForm.css'
 
 function AuthForm() {
     return (
-        <div className="login">
+        <div className="auth">
             <h2>Sign In</h2>
             <div className="inputBox">
                 <input type="text" placeholder="Username" />

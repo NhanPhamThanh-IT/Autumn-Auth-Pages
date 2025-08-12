@@ -1,4 +1,4 @@
-.login {
+.auth {
   position: relative;
   padding: 60px;
   background: rgba(255, 255, 255, 0.25);
@@ -14,7 +14,7 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
 }
 
-.login h2 {
+.auth h2 {
   position: relative;
   width: 100%;
   text-align: center;
@@ -24,11 +24,11 @@
   margin-bottom: 10px;
 }
 
-.login .inputBox {
+.auth .inputBox {
   position: relative;
 }
 
-.login .inputBox input {
+.auth .inputBox input {
   position: relative;
   width: 100%;
   padding: 15px 20px;
@@ -41,11 +41,11 @@
   margin-bottom: 30px;
 }
 
-.login .inputBox ::placeholder {
+.auth .inputBox ::placeholder {
   color: #8f2c24;
 }
 
-.login .inputBox #btn {
+.auth .inputBox #btn {
   position: relative;
   border: none;
   outline: none;
@@ -57,22 +57,22 @@
   transition: 0.5s;
 }
 
-.login .inputBox #btn:hover {
+.auth .inputBox #btn:hover {
   background: #d64c42;
 }
 
-.login .group {
+.auth .group {
   display: flex;
   justify-content: space-between;
 }
 
-.login .group a {
+.auth .group a {
   font-size: 1.25em;
   color: #8f2c24;
   font-weight: 500;
   text-decoration: none;
 }
 
-.login .group a:nth-child(2) {
+.auth .group a:nth-child(2) {
   text-decoration: underline;
 }
