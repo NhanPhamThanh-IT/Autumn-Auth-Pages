@@ -1,7 +1,7 @@
 import '../../styles/authForm.css';
 
 function AuthForm(props) {
-    const { title, fields, buttonText, linkText, linkHref, onSubmit } = props;
+    const { title, fields, formData, onChange, buttonText, questionText, linkText, linkHref, onSubmit } = props;
 
     return (
         <form className="auth" onSubmit={onSubmit}>
@@ -13,7 +13,9 @@ function AuthForm(props) {
                         type={field.type}
                         placeholder={field.placeholder}
                         name={field.name}
-                        required={field.required ?? true}
+                        value={formData[field.name] || ''}
+                        onChange={onChange}
+                        required
                     />
                 </div>
             ))}
@@ -24,6 +26,9 @@ function AuthForm(props) {
 
             {linkText && (
                 <div className="navigation">
+                    {
+                        questionText && <span>{questionText}</span>
+                    }
                     <a href={linkHref}>{linkText}</a>
                 </div>
             )}
