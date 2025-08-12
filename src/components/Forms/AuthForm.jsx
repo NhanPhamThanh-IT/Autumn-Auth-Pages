@@ -1,24 +1,34 @@
-import '../../styles/authForm.css'
+import '../../styles/authForm.css';
 
-function AuthForm() {
+function AuthForm(props) {
+    const { title, fields, buttonText, linkText, linkHref, onSubmit } = props;
+
     return (
-        <div className="auth">
-            <h2>Sign In</h2>
+        <form className="auth" onSubmit={onSubmit}>
+            <h2>{title}</h2>
+
+            {fields.map((field, index) => (
+                <div className="inputBox" key={index}>
+                    <input
+                        type={field.type}
+                        placeholder={field.placeholder}
+                        name={field.name}
+                        required={field.required ?? true}
+                    />
+                </div>
+            ))}
+
             <div className="inputBox">
-                <input type="text" placeholder="Username" />
+                <input type="submit" value={buttonText} id="btn" />
             </div>
-            <div className="inputBox">
-                <input type="password" placeholder="Password" />
-            </div>
-            <div className="inputBox">
-                <input type="submit" value="Login" id="btn" />
-            </div>
-            <div className="group">
-                <a href="#">Forget Password</a>
-                <a href="#">Signup</a>
-            </div>
-        </div>
-    )
+
+            {linkText && (
+                <div className="navigation">
+                    <a href={linkHref}>{linkText}</a>
+                </div>
+            )}
+        </form>
+    );
 }
 
-export default AuthForm
+export default AuthForm;

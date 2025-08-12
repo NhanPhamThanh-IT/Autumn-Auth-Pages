@@ -61,18 +61,14 @@
   background: #d64c42;
 }
 
-.auth .group {
+.auth .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.auth .group a {
+.auth .navigation a {
   font-size: 1.25em;
   color: #8f2c24;
   font-weight: 500;
   text-decoration: none;
-}
-
-.auth .group a:nth-child(2) {
-  text-decoration: underline;
 }
