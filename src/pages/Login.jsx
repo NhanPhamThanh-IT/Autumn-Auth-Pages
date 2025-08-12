@@ -1,9 +1,48 @@
-import React from 'react'
+import { useState } from 'react';
+import Background from '../components/Background';
+import AuthForm from '../components/Forms/AuthForm';
 
 function Login() {
+    const [formData, setFormData] = useState({
+        username: '',
+        password: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Form submitted:', formData);
+        setFormData({
+            username: '',
+            password: ''
+        });
+    };
+
     return (
-        <div>Login</div>
+        <Background>
+            <AuthForm
+                title="Sign In"
+                fields={[
+                    { type: 'text', placeholder: 'Username', name: 'username' },
+                    { type: 'password', placeholder: 'Password', name: 'password' }
+                ]}
+                formData={formData}
+                onChange={handleChange}
+                buttonText="Login"
+                questionText="Don't have an account?"
+                linkText="Signup"
+                linkHref="/signup"
+                onSubmit={handleSubmit}
+            />
+        </Background>
     )
 }
 
-export default Login
+export default Login;
