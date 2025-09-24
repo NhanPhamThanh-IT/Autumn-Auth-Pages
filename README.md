@@ -45,13 +45,13 @@ A beautiful, modern authentication page set built with **React** and **Vite**. T
 
 ## Demo
 
-![Screenshot](./src/JavaScript/assets/background.jpg)  
+![Screenshot](./JavaScript/src/assets/background.jpg)  
 _Example background. See the app for full animation and UI._
 
 ## Screenshots & GIFs
 
 <div align="center">
-<img src="./src/JavaScript/assets/background.jpg" width="400" alt="Autumn Auth Pages Screenshot" />
+<img src="./JavaScript/src/assets/background.jpg" width="400" alt="Autumn Auth Pages Screenshot" />
 <br/>
 <em>Login and Signup forms with animated autumn background</em>
 </div>
